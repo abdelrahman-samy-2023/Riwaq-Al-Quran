@@ -965,7 +965,8 @@ a, a:hover {
   .steps-section,
   .elementor-section,
   .cut-section,
-  .pricing-section {
+  .pricing-section,
+  .blog-section {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
@@ -1224,6 +1225,11 @@ a, a:hover {
   background-color: #f8f9fa;
 }
 
+.pricing-section h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
 .pricing-section .pricing-card {
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -1268,4 +1274,81 @@ a, a:hover {
   background-color: var(--main-color);
   color: #000;
   border: none;
+}
+
+.blog-section {
+  padding: 60px 0;
+}
+
+.blog-section h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.blog-section .blog-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-section .blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-section .blog-card a {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.blog-section .blog-card img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-section .blog-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.blog-section .blog-card-meta {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.blog-section .btn-explore {
+  border: 2px solid #000;
+  color: #000;
+  background-color: transparent;
+  transition: 0.3s ease-in;
+}
+.blog-section .btn-explore:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.blog-section .blog-card-content {
+  flex-grow: 1;
+}
+
+.accordion button {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+  font-style: normal;
+  line-height: 1.2em;
+  color: #1F1D0D;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion button:hover, .accordion button:active, .accordion button:visited, .accordion button:focus  {
+  text-decoration: none;
+  color: #11110d;
 }
