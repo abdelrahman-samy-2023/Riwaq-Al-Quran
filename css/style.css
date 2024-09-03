@@ -966,7 +966,8 @@ a, a:hover {
   .elementor-section,
   .cut-section,
   .pricing-section,
-  .blog-section {
+  .blog-section,
+  footer {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
@@ -1351,4 +1352,21 @@ a, a:hover {
 .accordion button:hover, .accordion button:active, .accordion button:visited, .accordion button:focus  {
   text-decoration: none;
   color: #11110d;
+}
+
+footer {
+  padding: 60px 0;
+}
+
+footer a {
+  color: var(--main-color);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--main-color-hover);
+}
+
+footer .fab, footer .fas {
+  font-size: 1.2rem;
 }
