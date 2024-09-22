@@ -84,3 +84,34 @@ $(function() {
 		siteMenuClone();
 	
 });
+
+// YouTube Iframe API and JavaScript for autoplay and modal handling
+var player;
+
+		function onYouTubeIframeAPIReady() {
+			// Create player object
+			player = new YT.Player('videoPlayer', {
+			height: '315',
+			width: '100%',
+			videoId: '', // Video ID will be set dynamically
+			events: {
+				'onReady': onPlayerReady
+			}
+			});
+		}
+
+		function onPlayerReady(event) {
+			// Empty function, autoplay handled below
+		}
+
+		$(document).ready(function () {
+			$('#videoModal').on('show.bs.modal', function (e) {
+			var button = $(e.relatedTarget); // Button that triggered the modal
+			var videoId = button.data('video-id'); // Get video ID
+			player.loadVideoById(videoId); // Load and autoplay video
+			});
+
+			$('#videoModal').on('hide.bs.modal', function () {
+			player.stopVideo(); // Stop the video when modal is closed
+			});
+		});
