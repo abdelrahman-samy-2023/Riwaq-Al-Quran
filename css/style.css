@@ -665,6 +665,41 @@ a, a:hover {
   font-size: 21px;
 }
 
+.position-relative {
+  position: relative;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background 0.3s;
+}
+
+.play-button:hover,
+.play-button:focus,
+.play-button:visited,
+.play-button:active {
+  background: rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+}
+
+#Testimonials .play-button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* About */
 .about-section {
   padding: 60px 0;
