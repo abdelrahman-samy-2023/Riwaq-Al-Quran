@@ -35,6 +35,7 @@
   
     <title>Riwaq Al Quran - Quran, Lessons, and Books</title>
   </head>
+
   <body>
 
     <!-- Mobile Menu Section -->
@@ -85,15 +86,111 @@
       <div class="site-navbar site-navbar-target js-sticky-header">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-2">
+            <div class="nav-left-items col d-flex justify-content-start">
               <!-- Logo -->
               <h1 class="my-0 site-logo">
                 <a href="index.html">
                   <img src="images/logo.png" alt="logo">
                 </a>
               </h1>
+
+              <!-- Profile Dropdown -->
+              <div class="dropdown profile">
+                <button class="btn btn-warning dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="images/profile-img.png" alt="profile-img"> Youssef
+                </button>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a>
+                  <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+              </div>
+              <!-- End Profile Dropdown -->
+
+              <!-- Notifications Dropdown -->
+              <div class="dropdown notifications">
+                <button class="btn btn-warning dropdown-toggle" type="button" id="notificationsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bell"></i>
+                    <span class="not-num">3</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="notificationsDropdown">
+                    <a class="dropdown-item" href="#">Notification 1</a>
+                    <a class="dropdown-item" href="#">Notification 2</a>
+                    <a class="dropdown-item" href="#">Notification 3</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">See all notifications</a>
+                </div>
+              </div>
+              <!-- End Notifications Dropdown -->
+
+              <!-- Shopping Cart Dropdown -->
+              <div class="dropdown shopping-cart">
+                <button class="btn btn-warning dropdown-toggle" type="button" id="shoppingCartDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="shop-num">3</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="shoppingCartDropdown">
+                  <h5 class="d-flex justify-content-center align-items-center">Cart</h5>
+                  <div class="dropdown-divider mb-2"></div>  
+                  <div class="dropdown-item mb-2 d-flex align-items-center">
+                        <img src="images/product1.jpg" alt="Product 1" class="img-fluid">
+                        <div class="info">
+                            <h6>Tag</h6>
+                            <p>Item description</p>
+                            <p class="price">Price: $120</p>
+                        </div>
+                        <div class="number">
+                          <span class="plus">+</span>
+                          <input type="text" value="1"/>
+                          <span class="minus">-</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-item mb-2 d-flex align-items-center">
+                      <img src="images/product2.jpg" alt="Product 2" class="img-fluid">
+                      <div class="info">
+                          <h6>Tag</h6>
+                          <p>Item description</p>
+                          <p class="price">Price: $120</p>
+                      </div>
+                      <div class="number">
+                        <span class="plus">+</span>
+                        <input type="text" value="1"/>
+                        <span class="minus">-</span>
+                      </div>
+                    </div>
+                  <div class="dropdown-item mb-2 d-flex align-items-center">
+                    <img src="images/product3.jpg" alt="Product 3" class="img-fluid">
+                    <div class="info">
+                        <h6>Tag</h6>
+                        <p>Item description</p>
+                        <p class="price">Price: $120</p>
+                    </div>
+                    <div class="number">
+                      <span class="plus">+</span>
+                      <input type="text" value="1"/>
+                      <span class="minus">-</span>
+                    </div>
+                  </div>
+                  <div class="dropdown-divider mb-2"></div>
+                  <div class="total dropdown-item mb-2">
+                    <p>Subtotal: $360</p><br>
+                    <p>Discount: $0</p><br>
+                    <p>Shipping: $0</p><br>
+                    <strong>Total: $360</strong>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="checkout btn btn-warning">Checkout</button>
+                  </div>
+                </div>
+              </div>
+              <!-- End Shopping Cart Dropdown -->
+
             </div>
-            <div class="col-10">
+            <div class="login">
+              <button class='glowing-btn'><span class='glowing-txt'>L<span class='faulty-letter'>O</span>GIN</span></button>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
               <!-- Navigation Menu -->
               <nav class="site-navigation text-right" role="navigation">
                 <div class="container">
@@ -101,7 +198,7 @@
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
                     <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
                   </div>
-
+  
                   <!-- Main Menu Items -->
                   <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
                     <li class="active"><a href="#home-section" class="nav-link">Home</a></li>
@@ -294,6 +391,51 @@
               </div>
             </div>
           </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counting Section -->
+    <section class="counting">
+      <div class="container">
+        <h2 class="mb-4 d-flex justify-content-center align-items-center">Discover Courses</h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+              <div class="counter yellow">
+                  <span class="counter-value">1963</span>
+                  <h3>Example</h3>
+                  <div class="counter-icon">
+                      <i class="fa fa-briefcase"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+              <div class="counter yellow">
+                  <span class="counter-value">1854</span>
+                  <h3>Example</h3>
+                  <div class="counter-icon">
+                      <i class="fa fa-globe"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+              <div class="counter yellow">
+                  <span class="counter-value">1756</span>
+                  <h3>Example</h3>
+                  <div class="counter-icon">
+                      <i class="fa fa-users"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+              <div class="counter yellow">
+                  <span class="counter-value">1823</span>
+                  <h3>Example</h3>
+                  <div class="counter-icon">
+                      <i class="fa fa-mobile-alt"></i>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
@@ -992,6 +1134,7 @@
     <script src="js/main.js"></script>
     <!-- JavaScript for autoplay and modal handling -->
     <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202409230101/show_ads_impl_fy2021.js"></script>
 
   </body>
 </html>

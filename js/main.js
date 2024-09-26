@@ -115,3 +115,67 @@ var player;
 			player.stopVideo(); // Stop the video when modal is closed
 			});
 		});
+
+// Shopping Cart
+$(document).ready(function() {
+	$('.minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+});
+
+// Counting 
+$(document).ready(function() {
+    var counted = false;
+
+    $(window).scroll(function() {
+        var sectionOffset = $('.counting').offset().top;
+        var scrollTop = $(this).scrollTop();
+        var windowHeight = $(window).height();
+
+        
+        if (!counted && (scrollTop + windowHeight) > sectionOffset) {
+            counted = true;
+            $('.counter-value').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 3500,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }
+    });
+});
+
+// Sticky
+$(document).ready(function() {
+    var lastScrollTop = 0;
+    var navbarTop = $('.site-navbar-top');
+
+    $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+
+        if (scrollTop > lastScrollTop) {
+            
+            navbarTop.addClass('sticky-hidden');
+        } else {
+            
+            navbarTop.removeClass('sticky-hidden'); 
+        }
+        lastScrollTop = scrollTop;
+    });
+});
