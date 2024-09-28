@@ -1889,3 +1889,9 @@ footer .fab, footer .fas {
     left: -75% !important;
   }
 }
+
+@media (max-width: 767px) {
+  .login {
+    display: none !important;
+  }
+}
