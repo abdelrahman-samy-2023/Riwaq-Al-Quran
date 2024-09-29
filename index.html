@@ -95,7 +95,7 @@
               </h1>
 
               <!-- Profile Dropdown -->
-              <div class="dropdown profile">
+              <div class="dropdown profile" id="profileDropdown">
                 <button class="btn btn-warning dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img src="images/profile-img.png" alt="profile-img"> Youssef
                 </button>
@@ -107,7 +107,7 @@
               <!-- End Profile Dropdown -->
 
               <!-- Notifications Dropdown -->
-              <div class="dropdown notifications">
+              <div class="dropdown notifications" id="notificationsDropdown">
                 <button class="btn btn-warning dropdown-toggle" type="button" id="notificationsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-bell"></i>
                     <span class="not-num">3</span>
@@ -123,12 +123,12 @@
               <!-- End Notifications Dropdown -->
 
               <!-- Shopping Cart Dropdown -->
-              <div class="dropdown shopping-cart">
+              <div class="dropdown shopping-cart" id="shoppingCartDropdown">
                 <button class="btn btn-warning dropdown-toggle" type="button" id="shoppingCartDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="shop-num">3</span>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="shoppingCartDropdown" style="max-height: 300px; overflow-y: auto;">
+                <div class="dropdown-menu" aria-labelledby="shoppingCartDropdown" style="max-height: 500px; overflow-y: auto;">
                   <h5 class="d-flex justify-content-center align-items-center">Cart</h5>
                   <div class="dropdown-divider mb-2"></div>  
                   <div class="dropdown-item mb-2 d-flex align-items-center">
@@ -184,18 +184,11 @@
               </div>
               <!-- End Shopping Cart Dropdown -->
 
-            </div>
-            <div class="login">
-              <button class='glowing-btn'><span class='glowing-txt'>L<span class='faulty-letter'>O</span>GIN</span></button>
-            </div>
-          </div>
-          <div class="row align-items-center">
-            <div class="col">
               <!-- Navigation Menu -->
               <nav class="site-navigation text-right" role="navigation">
                 <div class="container">
                   <!-- Mobile Menu Toggle -->
-                  <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
+                  <div class="mobile-menu d-inline-block ml-md-0 mr-auto py-3">
                     <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
                   </div>
   
@@ -273,11 +266,29 @@
                     </li>
                     <li><a href="#blog-section" class="nav-link">Blog</a></li>
                     <li><a href="#contact-section" class="nav-link">Contact us</a></li>
+                    <li class="notifications-btn mb-2">
+                      <a href="#" class="btn">
+                          <i class="fas fa-bell"></i> Notifications
+                      </a>
+                    </li>
+                    <li class="shopping-btn">
+                        <a href="#" class="btn">
+                            <i class="fas fa-shopping-cart"></i> Shopping Cart
+                        </a>
+                    </li>
                   </ul>
                 </div>
               </nav>
+
             </div>
+
+            <!-- Login Button -->
+            <div class="login" id="loginButton" style="display: none;">
+              <button class='glowing-btn'><span class='glowing-txt'>L<span class='faulty-letter'>O</span>GIN</span></button>
+            </div>
+
           </div>
+
         </div>
       </div>
       <!-- End Main Navbar -->

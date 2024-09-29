@@ -179,3 +179,19 @@ $(document).ready(function() {
         lastScrollTop = scrollTop;
     });
 });
+
+// Login
+// Check if user is logged in
+const isLoggedIn = true; // Default to true for logged-in state
+
+if (isLoggedIn) {
+	document.getElementById('loginButton').style.display = 'none'; // Hide login button
+	document.getElementById('profileDropdown').style.display = 'block'; // Show profile dropdown
+	document.getElementById('notificationsDropdown').style.display = 'block'; // Show notifications dropdown
+	document.getElementById('shoppingCartDropdown').style.display = 'block'; // Show shopping cart dropdown
+} else {
+	document.getElementById('loginButton').style.display = 'block'; // Show login button
+	document.getElementById('profileDropdown').style.display = 'none'; // Hide profile dropdown
+	document.getElementById('notificationsDropdown').style.display = 'none'; // Hide notifications dropdown
+	document.getElementById('shoppingCartDropdown').style.display = 'none'; // Hide shopping cart dropdown
+}
