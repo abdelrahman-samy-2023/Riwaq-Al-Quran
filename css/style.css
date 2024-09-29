@@ -1928,6 +1928,10 @@ footer .fab, footer .fas {
       margin-top: 40px;
   }
 }
+.shopping-cart .dropdown-menu {
+  left: -150px !important;
+  top: 0 !important;
+}
 @media (max-width: 635px) {
   .site-navbar .nav-left-items .shopping-cart .dropdown-menu {
     left: -75% !important;
@@ -1937,6 +1941,31 @@ footer .fab, footer .fas {
 @media (max-width: 767px) {
   .login {
     display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .site-navbar .nav-left-items .profile {
+    margin-left: 45%;
+
+  }
+}
+@media (max-width: 991px) {
+  .site-navbar .nav-left-items .profile {
+    margin-left: 30%;
+
+  }
+}
+@media (max-width: 767px) {
+  .site-navbar .nav-left-items .profile {
+    margin-left: 10%;
+
+  }
+}
+@media (max-width: 550px) {
+  .site-navbar .nav-left-items .profile {
+    margin-left: unset;
+
   }
 }
 
