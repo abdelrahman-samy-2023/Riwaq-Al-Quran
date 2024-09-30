@@ -8,13 +8,15 @@
   */
 }
 
+html, body {
+  overflow-x: hidden !important;
+}
 
 /* Body Styling */
 body {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: #fff;
   position: relative;
-  overflow-x: hidden;
 }
 
 /* Overlay Styling */
@@ -729,7 +731,7 @@ input{
   z-index: 2000;
   padding-top: 20px;
   background: #fff;
-  height: calc(100vh);
+  height: 100%;
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
   transform: translateX(110%);
@@ -947,7 +949,7 @@ input{
 
 /* Sticky Navbar Active State */
 .sticky-wrapper.is-sticky .site-navbar {
-  background-color: #007bff;
+  background-color: white;
 }
 
 /* Sticky Navbar Menu Items */
