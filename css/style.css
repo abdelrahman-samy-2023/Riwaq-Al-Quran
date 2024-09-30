@@ -149,7 +149,8 @@ a, a:hover {
 }
 .site-navbar .nav-left-items .profile button,
 .site-navbar .nav-left-items .notifications button,
-.site-navbar .nav-left-items .shopping-cart button {
+.site-navbar .nav-left-items .shopping-cart button,
+.site-navbar .nav-left-items .languages button {
   color: #000;
   background-color: unset;
   border: none;
@@ -157,7 +158,8 @@ a, a:hover {
 }
 .site-navbar .nav-left-items .profile button:focus,
 .site-navbar .nav-left-items .notifications button:focus,
-.site-navbar .nav-left-items .shopping-cart button:focus {
+.site-navbar .nav-left-items .shopping-cart button:focus,
+.site-navbar .nav-left-items .languages button:focus {
   color: #000;
   background-color: unset;
 }
@@ -172,10 +174,20 @@ a, a:hover {
   color: white !important;
 }
 .site-navbar .nav-left-items .notifications button i,
-.shopping-cart button i {
+.shopping-cart button i,
+.site-navbar .nav-left-items .languages button i {
   position: relative;
   font-size: 18px;
   color: var(--main-color-hover);
+}
+.site-navbar .nav-left-items .languages a {
+  font-size: 12px;
+}
+.languages .lang-img {
+  max-width: 100%;
+  width: 25px;
+  margin-right: 5px;
+  border-radius: 8px;
 }
 .site-navbar .nav-left-items .notifications button .not-num,
 .shopping-cart button .shop-num {
@@ -534,7 +546,7 @@ input{
 .site-navbar .site-navigation .site-menu > li > a {
   padding: 20px 10px;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 15px;
+  font-size: 12px;
   text-decoration: none !important;
 }
 
@@ -1004,7 +1016,28 @@ input{
 .mobile-menu {
   position: absolute;
   right: calc(15px + 15px);
-  top: 10px;
+  top: 5px;
+}
+@media (max-width: 415px) {
+  .site-navbar .nav-left-items {
+    justify-content: left !important;
+    gap: 0;
+  }
+}
+@media (max-width: 375px) {
+  .mobile-menu {
+    right: 7px;
+    top: 0;
+  }
+  .site-navbar .site-logo a img {
+    width: 80px;
+  }
+  .site-navbar .nav-left-items .profile button img {
+    width: 25px;
+  }
+  .site-navbar .nav-left-items .languages button i {
+    font-size: 16px;
+  }
 }
 @media (min-width: 1201px) {
   .mobile-menu {
@@ -1887,7 +1920,7 @@ footer .fab, footer .fas {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .site-navbar .nav-left-items .notifications,
   .site-navbar .nav-left-items .shopping-cart {
     display: none !important;
@@ -1952,20 +1985,13 @@ footer .fab, footer .fas {
 }
 @media (max-width: 991px) {
   .site-navbar .nav-left-items .profile {
-    margin-left: 30%;
+    margin-left: 20%;
 
   }
 }
 @media (max-width: 767px) {
   .site-navbar .nav-left-items .profile {
-    margin-left: 10%;
-
-  }
-}
-@media (max-width: 550px) {
-  .site-navbar .nav-left-items .profile {
     margin-left: unset;
-
   }
 }
 
@@ -1976,4 +2002,31 @@ footer .fab, footer .fas {
 .right-to-left .mobile-menu {
   left: calc(15px + 15px) !important;
   right: unset !important;
+  top: 5px;
+}
+
+.right-to-left .site-navbar .nav-left-items .languages a {
+  text-align: right !important;
+}
+
+@media (max-width: 415px) {
+  .right-to-left .site-navbar .nav-left-items {
+    justify-content: right !important;
+    gap: 0;
+  }
+}
+@media (max-width: 375px) {
+  .right-to-left .mobile-menu {
+    left: 7px !important;
+    top: 0;
+  }
+  .right-to-left .site-navbar .site-logo a img {
+    width: 80px;
+  }
+  .right-to-left .site-navbar .nav-left-items .profile button img {
+    width: 25px;
+  }
+  .right-to-left .site-navbar .nav-left-items .languages button i {
+    font-size: 16px;
+  }
 }

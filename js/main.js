@@ -195,3 +195,6 @@ if (isLoggedIn) {
 	document.getElementById('notificationsDropdown').style.display = 'none'; // Hide notifications dropdown
 	document.getElementById('shoppingCartDropdown').style.display = 'none'; // Hide shopping cart dropdown
 }
+
+// AOS
+AOS.init();
