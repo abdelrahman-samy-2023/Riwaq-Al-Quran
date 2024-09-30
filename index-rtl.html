@@ -660,22 +660,15 @@
             </div>
         </div>
 
-        <!-- Modal for Video -->
-        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="videoModalLabel">Student Testimonial</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
+        <!-- Popup for Video -->
+        <div id="videoPopup" class="popup">
+            <div class="popup-content">
+                <span class="close mb-3" id="closePopup">&times;</span>
+                <h5 class="popup-title mb-3">Student Testimonial</h5>
                 <div id="videoPlayer"></div>
-                </div>
-            </div>
             </div>
         </div>
+
         </section>
 
         <!-- Section for Our Instructors -->
@@ -1171,6 +1164,7 @@
         <!-- JavaScript for autoplay and modal handling -->
         <script src="https://www.youtube.com/iframe_api"></script>
         <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202409230101/show_ads_impl_fy2021.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
 
     </body>
 </html>

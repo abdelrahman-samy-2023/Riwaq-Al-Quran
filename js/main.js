@@ -85,36 +85,49 @@ $(function() {
 	
 });
 
-// YouTube Iframe API and JavaScript for autoplay and modal handling
+// Video Popup
+
 var player;
 
-		function onYouTubeIframeAPIReady() {
-			// Create player object
-			player = new YT.Player('videoPlayer', {
-			height: '315',
-			width: '100%',
-			videoId: '', // Video ID will be set dynamically
-			events: {
-				'onReady': onPlayerReady
-			}
-			});
-		}
+function onYouTubeIframeAPIReady() {
+    // Create player object
+    player = new YT.Player('videoPlayer', {
+        height: '315',
+        width: '100%',
+        videoId: '', // Video ID will be set dynamically
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
 
-		function onPlayerReady(event) {
-			// Empty function, autoplay handled below
-		}
+function onPlayerReady(event) {
+    // Empty function, autoplay handled below
+}
 
-		$(document).ready(function () {
-			$('#videoModal').on('show.bs.modal', function (e) {
-			var button = $(e.relatedTarget); // Button that triggered the modal
-			var videoId = button.data('video-id'); // Get video ID
-			player.loadVideoById(videoId); // Load and autoplay video
-			});
+$(document).ready(function () {
+    // Show the popup and load video
+    $('.play-button').on('click', function () {
+        var videoId = $(this).data('video-id'); // Get video ID
+        player.loadVideoById(videoId); // Load and autoplay video
+        $('#videoPopup').css('display', 'block'); // Show popup
+    });
 
-			$('#videoModal').on('hide.bs.modal', function () {
-			player.stopVideo(); // Stop the video when modal is closed
-			});
-		});
+    // Close the popup when the close button is clicked
+    $('#closePopup').on('click', function () {
+        player.stopVideo(); // Stop the video when popup is closed
+        $('#videoPopup').css('display', 'none'); // Hide popup
+    });
+
+    // Close popup when clicking outside of it
+    $(document).mouseup(function (e) {
+        var popup = $("#videoPopup");
+        if (!popup.is(e.target) && popup.has(e.target).length === 0) {
+            player.stopVideo(); // Stop the video
+            popup.css('display', 'none'); // Hide popup
+        }
+    });
+});
 
 // Shopping Cart
 $(document).ready(function() {
