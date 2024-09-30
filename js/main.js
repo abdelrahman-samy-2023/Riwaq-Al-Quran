@@ -198,3 +198,37 @@ if (isLoggedIn) {
 
 // AOS
 AOS.init();
+
+let lastScrollTop = 0; // Variable to store the last scroll position
+
+// Show the button when scrolling down
+window.onscroll = function() {
+    const scrollToTopButton = document.getElementById("scrollToTop");
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > 100) {
+        scrollToTopButton.style.display = "block"; // Show the button
+
+        // Check the scroll direction
+        if (currentScrollTop > lastScrollTop) {
+            scrollToTopButton.style.display = "block"; // Show the button when scrolling down
+        } else {
+            scrollToTopButton.style.display = "none"; // Hide the button when scrolling up
+        }
+    } else {
+        scrollToTopButton.style.display = "none"; // Hide the button if scroll is less than 100
+    }
+
+    lastScrollTop = currentScrollTop; // Update the last scroll position
+};
+
+// Scroll to top when the button is clicked
+document.getElementById("scrollToTop").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'}); // Scroll to the top
+};
+
+// Ensure the code runs after the page has loaded
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollToTopButton = document.getElementById("scrollToTop");
+    scrollToTopButton.style.display = "none"; // Ensure the button is hidden on page load
+});
